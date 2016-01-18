@@ -1,0 +1,63 @@
+//
+//  SwustOA.pch
+//  SwustOA
+//
+//  Created by 王森珂 on 15/4/19.
+//  Copyright (c) 2015年 王森珂. All rights reserved.
+//
+
+#ifndef SwustOA_SwustOA_pch
+#define SwustOA_SwustOA_pch
+
+
+
+#ifdef DEBUG
+#   define WWLog(...) NSLog(__VA_ARGS__)
+#else
+#   define WWLog(...)
+#endif
+
+
+#import "MyAlert.h"
+
+#import "UIView+Extension.h"
+#import "UIImage+Extension.h"
+#import "BaseToolBar.h"
+#import "BaseCell.h"
+#import "BaseViewController.h"
+#import "SegmentBaseViewController.h"
+#import "RequestUrl.h"
+#import "HttpTools.h"
+#import "BaseModel.h"
+#import "MJExtension.h"
+
+#import "MBProgressHUD+MJ.h"
+#import "AccountMadel.h"
+#import "LoginTool.h"
+#import "UIImageView+Extension.h"
+#import "AccountGlobal.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//版本号
+#define VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define ToolBarHeight 44
+
+//颜色
+#define WWColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define DefaultBarColor WWColor(0,210,255)
+#define ThemeColor WWColor(239,239,244)
+
+// block self
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+
+//数据库
+#define DB_FILE_NAME @"app.db"
+#endif
